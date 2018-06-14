@@ -1,0 +1,11 @@
+--- a/src/core/abi.cc	2018-06-14 02:17:52.059136459 -0600
+--- a/src/core/abi.cc	2018-06-14 02:17:36.742932573 -0600
+@@ -21,7 +21,7 @@
+ {
+   // are we compiled as 32- or 64-bit process ?
+   long sc = sysconf(LONG_BIT);
+-  if(sc==-1) sc = sysconf(_SC_LONG_BIT);
++  if(sc==-1) sc = sysconf(LONG_BIT);
+   if(sc!=-1) system.setWidth(sc);
+ 
+   pushd(PROC_SYS);
