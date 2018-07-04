@@ -26,7 +26,7 @@ define Package/btrbk
 	CATEGORY:=Utilities
 	TITLE:=Tool for creating snapshots and remote backups of btrfs subvolumes
 	URL:=https://github.com/digint/btrbk
-	DEPENDS:=+perl
+	DEPENDS:=+btrfs-progs +perlbase-essential +perlbase-getopt +perlbase-time +perlbase-tie
 endef
 
 define Package/btrbk/description
